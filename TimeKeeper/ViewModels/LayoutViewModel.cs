@@ -9,6 +9,9 @@ namespace TimeKeeper.ViewModels
     public class LayoutViewModel : ViewModelBase
     {
 
+        public ViewModelBase? CurrentContentViewModel => new ProjectsViewModel();
+
+
         public ViewModelBase? CurrentNavBarViewModel => new NavigationBarViewModel();
     }
 }

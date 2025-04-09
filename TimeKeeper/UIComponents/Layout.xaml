@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TimeKeeper.UIComponents"
              xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
+             xmlns:view="clr-namespace:TimeKeeper.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
@@ -34,7 +35,15 @@
                 </Grid>
 
                 <!-- #Main Content Area -->
-                <Label Grid.Column="1" Content="Main Content Area placeholder"/>
+                <Grid Grid.Column="1" Grid.Row="0">
+                    <ContentControl Content="{Binding CurrentContentViewModel}">
+                        <ContentControl.Resources>
+                            <DataTemplate DataType="{x:Type vm:ProjectsViewModel}">
+                                <view:ProjectsView/>
+                            </DataTemplate>
+                        </ContentControl.Resources>
+                    </ContentControl>
+                </Grid>
                 
                 <!-- #Side Content -->
                 <Label Grid.Column="2" Content="Side Content placeholder"/>
