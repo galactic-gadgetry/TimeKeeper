@@ -4,11 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TimeKeeper.Views"
+        xmlns:ui="clr-namespace:TimeKeeper.UIComponents"
+        xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
         mc:Ignorable="d"
         Title="MainView" Height="450" Width="800">
     <Grid>
 
-        <Label Content="Main View placeholder"/>
+        <ContentControl Content="{Binding CurrentMainContentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type vm:LayoutViewModel}">
+                    <ui:Layout/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
 
     </Grid>
 </Window>

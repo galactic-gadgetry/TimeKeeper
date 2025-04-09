@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimeKeeper.ViewModels
 {
-    public class MainViewModel : ViewModelBase
+    public class LayoutViewModel : ViewModelBase
     {
-
-        public ViewModelBase? CurrentMainContentViewModel => new LayoutViewModel();
     }
 }
