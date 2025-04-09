@@ -7,9 +7,10 @@
         xmlns:ui="clr-namespace:TimeKeeper.UIComponents"
         xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Style="{StaticResource DefaultWindowStyle}"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-
+        
         <ContentControl Content="{Binding CurrentMainContentViewModel}">
             <ContentControl.Resources>
                 <DataTemplate DataType="{x:Type vm:LayoutViewModel}">
