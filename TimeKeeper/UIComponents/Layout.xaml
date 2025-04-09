@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TimeKeeper.UIComponents"
+             xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
@@ -22,8 +23,16 @@
                 </Grid.RowDefinitions>
                 
                 <!-- #Navigation Bar -->
-                <Label Grid.Column="0" Content="Navigation Bar placeholder"/>
-                
+                <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                    <ContentControl Content="{Binding CurrentNavBarViewModel}">
+                        <ContentControl.Resources>
+                            <DataTemplate DataType="{x:Type vm:NavigationBarViewModel}">
+                                <local:NavigationBar/>
+                            </DataTemplate>
+                        </ContentControl.Resources>
+                    </ContentControl>
+                </Grid>
+
                 <!-- #Main Content Area -->
                 <Label Grid.Column="1" Content="Main Content Area placeholder"/>
                 
