@@ -38,6 +38,9 @@
                 <Grid Grid.Column="1" Grid.Row="0">
                     <ContentControl Content="{Binding CurrentContentViewModel}">
                         <ContentControl.Resources>
+                            <DataTemplate DataType="{x:Type vm:DailyTimesheetViewModel}">
+                                <view:DailyTimesheetView/>
+                            </DataTemplate>
                             <DataTemplate DataType="{x:Type vm:ProjectsViewModel}">
                                 <view:ProjectsView/>
                             </DataTemplate>
