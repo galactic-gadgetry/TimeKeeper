@@ -4,11 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TimeKeeper.UIComponents"
+             xmlns:btn="clr-namespace:TimeKeeper.UIComponents.Buttons"
              mc:Ignorable="d" 
              d:DesignHeight="650">
     
     <Grid>
-        <Border>
+        <Border Background="{StaticResource LayerFillColorBrush2}">
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -21,16 +22,18 @@
                 </Grid.RowDefinitions>
                 
                 <!-- #Side Navigation Bar Buttons -->
-                <Border Grid.Column="0" Grid.Row="0"/>
+                <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="{StaticResource LayerFillColorBrush1}"/>
                 
                 <!-- #Navigation Buttons -->
-                <StackPanel Grid.Column="1" Grid.Row="0">
-                    <Button Content="Placeholder"/>
-                    <Button Content="Placeholder"/>
-                </StackPanel>
+                <Border Grid.Column="1" Grid.Row="0" Background="{StaticResource LayerFillColorBrush2}">
+                    <StackPanel Margin="7,55,7,0">
+                        <btn:NavigationBarButton/>
+                        <btn:NavigationBarButton/>
+                    </StackPanel>
+                </Border>
 
                 <!-- #Title -->
-                <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Content="Placeholder"/>
+                <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Content="Time Keeper"/>
             </Grid>
 
         </Border>

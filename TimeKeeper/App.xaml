@@ -6,6 +6,10 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/GingerBudUI;component/GingerBudUI.xaml"/>
+
+                <ResourceDictionary Source="Resources/Dictionaries/Borders.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Images.xaml"/>
+                <ResourceDictionary Source="Resources/Dictionaries/Typography.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

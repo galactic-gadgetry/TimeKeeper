@@ -9,12 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-primary-80.png" />
+    <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-secondary-100.png" />
+    <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-secondary-120.png" />
+    <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-secondary-disabled.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="UIComponents\Buttons\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GingerBudUI\GingerBudUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-primary-80.png" />
+    <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-secondary-100.png" />
+    <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-secondary-120.png" />
+    <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-secondary-disabled.png" />
   </ItemGroup>
 
 </Project>

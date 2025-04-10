@@ -3,6 +3,8 @@
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 
+    <CornerRadius x:Key="ControlThemeCornerRadius">4</CornerRadius>
+    
     <sys:Double x:Key="ControlContentThemeFontSize">14</sys:Double>
     
 </ResourceDictionary>

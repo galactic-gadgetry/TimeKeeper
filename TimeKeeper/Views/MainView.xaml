@@ -8,6 +8,7 @@
         xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
         mc:Ignorable="d"
         Style="{StaticResource DefaultWindowStyle}"
+        MinHeight="510" MinWidth="950"
         WindowStartupLocation="CenterScreen">
     <Grid>
         

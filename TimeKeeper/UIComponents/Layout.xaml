@@ -36,16 +36,21 @@
 
                 <!-- #Main Content Area -->
                 <Grid Grid.Column="1" Grid.Row="0">
-                    <ContentControl Content="{Binding CurrentContentViewModel}">
-                        <ContentControl.Resources>
+                    <ScrollViewer Content="{Binding CurrentContentViewModel}">
+                        <ScrollViewer.Resources>
+                            <Style TargetType="ScrollViewer">
+                                <Setter Property="HorizontalScrollBarVisibility" Value="Hidden"/>
+                                <Setter Property="VerticalScrollBarVisibility" Value="Hidden"/>
+                            </Style>
+                            
                             <DataTemplate DataType="{x:Type vm:DailyTimesheetViewModel}">
                                 <view:DailyTimesheetView/>
                             </DataTemplate>
                             <DataTemplate DataType="{x:Type vm:ProjectsViewModel}">
                                 <view:ProjectsView/>
                             </DataTemplate>
-                        </ContentControl.Resources>
-                    </ContentControl>
+                        </ScrollViewer.Resources>
+                    </ScrollViewer>
                 </Grid>
                 
                 <!-- #Side Content -->
