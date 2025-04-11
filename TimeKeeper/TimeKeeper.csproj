@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\Icons\Briefcase\briefcase-text-color-primary-80.png" />
+    <None Remove="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-100.png" />
+    <None Remove="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-120.png" />
+    <None Remove="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-disabled.png" />
     <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-primary-80.png" />
     <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-secondary-100.png" />
     <None Remove="Resources\Images\Icons\Calendar\calendar-text-color-secondary-120.png" />
@@ -24,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\Icons\Briefcase\briefcase-text-color-primary-80.png" />
+    <Resource Include="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-100.png" />
+    <Resource Include="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-120.png" />
+    <Resource Include="Resources\Images\Icons\Briefcase\briefcase-text-color-secondary-disabled.png" />
     <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-primary-80.png" />
     <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-secondary-100.png" />
     <Resource Include="Resources\Images\Icons\Calendar\calendar-text-color-secondary-120.png" />

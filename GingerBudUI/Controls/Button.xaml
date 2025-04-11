@@ -107,8 +107,8 @@
         <Setter Property="Foreground" Value="{DynamicResource NavigationBarButtonForeground}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource NavigationBarButtonBorderBrush}"/>
         <Setter Property="BorderThickness" Value="{StaticResource ButtonThemeBorderThickness}"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="{StaticResource ButtonPadding}"/>
         <Setter Property="FontFamily" Value="{DynamicResource ControlContentThemeFontFamily}"/>
         <Setter Property="FontSize" Value="16"/>

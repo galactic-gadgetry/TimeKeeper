@@ -10,10 +10,10 @@
     <Grid>
         <Border>
 
-            <Button>
+            <Button Command="{Binding ButtonClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                 <Button.Resources>
                     <Style TargetType="Button" BasedOn="{StaticResource NavigationBarButtonStyle}">
-                        
+                        <Setter Property="Padding" Value="{Binding ButtonPadding, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                     </Style>
                 </Button.Resources>
 
@@ -21,7 +21,7 @@
                     <Image Stretch="None">
                         <Image.Resources>
                             <Style TargetType="Image">
-                                <Setter Property="Source" Value="{StaticResource CalendarNavBarButton}"/>
+                                <Setter Property="Source" Value="{Binding ButtonImageSource, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                 <Style.Triggers>
                                     <!-- #Mouse over, enabled behaviors -->
                                     <MultiDataTrigger>
@@ -29,22 +29,22 @@
                                             <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsMouseOver}" Value="True"/>
                                             <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsEnabled}" Value="True"/>
                                         </MultiDataTrigger.Conditions>
-                                        <Setter Property="Source" Value="{StaticResource CalendarNavBarButtonMouseOver}"/>
+                                        <Setter Property="Source" Value="{Binding ButtonImageSourceMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                     </MultiDataTrigger>
                                     <!-- #Pressed behaviors -->
                                     <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsPressed}" Value="True">
-                                        <Setter Property="Source" Value="{StaticResource CalendarNavBarButtonPressed}"/>
+                                        <Setter Property="Source" Value="{Binding ButtonImageSourcePressed, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                     </DataTrigger>
                                     <!-- #Disabled behaviors -->
                                     <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsEnabled}" Value="False">
-                                        <Setter Property="Source" Value="{StaticResource CalendarNavBarButtonDisabled}"/>
+                                        <Setter Property="Source" Value="{Binding ButtonImageSourceDisabled, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                     </DataTrigger>
                                 </Style.Triggers>
                             </Style>
                         </Image.Resources>
                     </Image>
                     
-                    <TextBlock Text="Placeholder">
+                    <TextBlock Text="{Binding ButtonText, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                         <TextBlock.Resources>
                             <Style TargetType="TextBlock" BasedOn="{StaticResource NavigationBarButtonTextBlockStyle}">
                                 

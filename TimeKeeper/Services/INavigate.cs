@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeKeeper.ViewModels
+namespace TimeKeeper.Services
 {
-    public class ProjectsViewModel : DefaultViewModelBase
+    public interface INavigate
     {
+
+        public void Navigate();
     }
 }

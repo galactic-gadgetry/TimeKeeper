@@ -27,8 +27,20 @@
                 <!-- #Navigation Buttons -->
                 <Border Grid.Column="1" Grid.Row="0" Background="{StaticResource LayerFillColorBrush2}">
                     <StackPanel Margin="7,55,7,0">
-                        <btn:NavigationBarButton/>
-                        <btn:NavigationBarButton/>
+                        <btn:NavigationBarButton
+                            ButtonText="Timesheet"
+                            ButtonClickedCommand="{Binding DailyTimesheetButtonClickedCommand}"
+                            ButtonImageSource="{StaticResource CalendarNavBarButton}"
+                            ButtonImageSourceMouseOver="{StaticResource CalendarNavBarButtonMouseOver}"
+                            ButtonImageSourcePressed="{StaticResource CalendarNavBarButtonPressed}"
+                            ButtonImageSourceDisabled="{StaticResource CalendarNavBarButtonDisabled}"/>
+                        <btn:NavigationBarButton
+                            ButtonText="Projects"
+                            ButtonClickedCommand="{Binding ProjectsButtonClickedCommand}"
+                            ButtonImageSource="{StaticResource BriefcaseNavBarButton}"
+                            ButtonImageSourceMouseOver="{StaticResource BriefcaseNavBarButtonMouseOver}"
+                            ButtonImageSourcePressed="{StaticResource BriefcaseNavBarButtonPressed}"
+                            ButtonImageSourceDisabled="{StaticResource BriefcaseNavBarButtonDisabled}"/>
                     </StackPanel>
                 </Border>
 

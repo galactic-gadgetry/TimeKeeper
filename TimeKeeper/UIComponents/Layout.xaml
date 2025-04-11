@@ -54,9 +54,13 @@
                 </Grid>
                 
                 <!-- #Side Content -->
-                <Label Grid.Column="2" Content="Side Content placeholder"/>
-                
-                <!-- #Info Bar -->
+                <Grid Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+                    <ContentControl Content="{Binding CurrentSideContentViewModel}">
+                        
+                    </ContentControl>
+                </Grid>
+
+                    <!-- #Info Bar -->
                 <Label Grid.Column="1" Grid.Row="1" Content="Info Bar placeholder"/>
             </Grid>
             
