@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TimeKeeper
+namespace TimeKeeper.UIComponents
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Layout.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Layout : UserControl
     {
-        public MainWindow()
+        public Layout()
         {
             InitializeComponent();
         }

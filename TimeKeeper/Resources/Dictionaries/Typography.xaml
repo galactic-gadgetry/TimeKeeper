@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Style x:Key="ViewTitleLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextAccentFillColorBrush1}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+    
+</ResourceDictionary>

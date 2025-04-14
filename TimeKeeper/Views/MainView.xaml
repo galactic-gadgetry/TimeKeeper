@@ -1,0 +1,24 @@
+﻿<Window x:Class="TimeKeeper.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeKeeper.Views"
+        xmlns:ui="clr-namespace:TimeKeeper.UIComponents"
+        xmlns:vm="clr-namespace:TimeKeeper.ViewModels"
+        mc:Ignorable="d"
+        Style="{StaticResource DefaultWindowStyle}"
+        MinHeight="510" MinWidth="950"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+        <ContentControl Content="{Binding CurrentMainContentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type vm:LayoutViewModel}">
+                    <ui:Layout/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+
+    </Grid>
+</Window>
