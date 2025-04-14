@@ -14,6 +14,20 @@
                 <Button.Resources>
                     <Style TargetType="Button" BasedOn="{StaticResource NavigationBarButtonStyle}">
                         <Setter Property="Padding" Value="{Binding ButtonPadding, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                        <Style.Triggers>
+                            <!-- #Highlighted behaviors -->
+                            <DataTrigger Binding="{Binding IsHighlighted, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
+                                <Setter Property="Background" Value="{StaticResource NavigationBarButtonBackgroundHighlighted}"/>
+                            </DataTrigger>
+                            <!-- Highlighted, pressed behaviors -->
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding IsHighlighted, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" Value="True"/>
+                                    <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsPressed}" Value="True"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Background" Value="{StaticResource NavigationBarButtonBackgroundPressed}"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
                     </Style>
                 </Button.Resources>
 
@@ -39,6 +53,10 @@
                                     <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsEnabled}" Value="False">
                                         <Setter Property="Source" Value="{Binding ButtonImageSourceDisabled, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                     </DataTrigger>
+                                    <!-- Highlighted behaviors -->
+                                    <DataTrigger Binding="{Binding IsHighlighted, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" Value="True">
+                                        <Setter Property="Source" Value="{Binding ButtonImageSourceHighlighted, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                    </DataTrigger>
                                 </Style.Triggers>
                             </Style>
                         </Image.Resources>
@@ -47,7 +65,11 @@
                     <TextBlock Text="{Binding ButtonText, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                         <TextBlock.Resources>
                             <Style TargetType="TextBlock" BasedOn="{StaticResource NavigationBarButtonTextBlockStyle}">
-                                
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsHighlighted, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}" Value="True">
+                                        <Setter Property="Foreground" Value="{StaticResource NavigationBarButtonForegroundHighlighted}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
                             </Style>
                         </TextBlock.Resources>
                     </TextBlock>

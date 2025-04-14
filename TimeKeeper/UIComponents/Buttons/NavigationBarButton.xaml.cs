@@ -48,6 +48,13 @@ namespace TimeKeeper.UIComponents.Buttons
                 typeof(NavigationBarButton),
                 new PropertyMetadata(null));
 
+        public static readonly DependencyProperty ButtonImageSourceHighlightedProperty =
+            DependencyProperty.Register(
+                nameof(ButtonImageSourceHighlighted),
+                typeof(ImageSource),
+                typeof(NavigationBarButton),
+                new PropertyMetadata(null));
+
         public static readonly DependencyProperty ButtonImageSourceMouseOverProperty =
             DependencyProperty.Register(
                 nameof(ButtonImageSourceMouseOver),
@@ -76,24 +83,13 @@ namespace TimeKeeper.UIComponents.Buttons
                 typeof(NavigationBarButton),
                 new PropertyMetadata(string.Empty));
 
+        public static readonly DependencyProperty IsHighlightedProperty =
+            DependencyProperty.Register(
+                nameof(IsHighlighted),
+                typeof(bool),
+                typeof(NavigationBarButton),
+                new PropertyMetadata(false));
 
-        /// <summary>
-        /// Padding for the button.
-        /// </summary>
-        public Thickness ButtonPadding
-        {
-            get => (Thickness)GetValue(ButtonPaddingProperty);
-            set => SetValue(ButtonPaddingProperty, value);
-        }
-
-        /// <summary>
-        /// Text for button text block.
-        /// </summary>
-        public string ButtonText
-        {
-            get => (string)GetValue(ButtonTextProperty);
-            set => SetValue(ButtonTextProperty, value);
-        }
 
         /// <summary>
         /// Source for button's image.
@@ -114,6 +110,15 @@ namespace TimeKeeper.UIComponents.Buttons
         }
 
         /// <summary>
+        /// Source for the button's image when highlighted.
+        /// </summary>
+        public ImageSource ButtonImageSourceHighlighted
+        {
+            get => (ImageSource)GetValue(ButtonImageSourceHighlightedProperty);
+            set => SetValue(ButtonImageSourceHighlightedProperty, value);
+        }
+
+        /// <summary>
         /// Source for the button's image source on mouse over.
         /// </summary>
         public ImageSource ButtonImageSourceMouseOver
@@ -129,6 +134,33 @@ namespace TimeKeeper.UIComponents.Buttons
         {
             get => (ImageSource)GetValue(ButtonImageSourcePressedProperty);
             set => SetValue(ButtonImageSourcePressedProperty, value);
+        }
+
+        /// <summary>
+        /// Padding for the button.
+        /// </summary>
+        public Thickness ButtonPadding
+        {
+            get => (Thickness)GetValue(ButtonPaddingProperty);
+            set => SetValue(ButtonPaddingProperty, value);
+        }
+
+        /// <summary>
+        /// Text for button text block.
+        /// </summary>
+        public string ButtonText
+        {
+            get => (string)GetValue(ButtonTextProperty);
+            set => SetValue(ButtonTextProperty, value);
+        }
+
+        /// <summary>
+        /// True if the button is highlighted, false otherwise.
+        /// </summary>
+        public bool IsHighlighted
+        {
+            get => (bool)GetValue(IsHighlightedProperty);
+            set => SetValue(IsHighlightedProperty, value);
         }
 
 

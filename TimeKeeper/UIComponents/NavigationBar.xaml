@@ -30,17 +30,21 @@
                         <btn:NavigationBarButton
                             ButtonText="Timesheet"
                             ButtonClickedCommand="{Binding DailyTimesheetButtonClickedCommand}"
+                            IsHighlighted="{Binding IsDailyTimesheetTabSelected}"
                             ButtonImageSource="{StaticResource CalendarNavBarButton}"
                             ButtonImageSourceMouseOver="{StaticResource CalendarNavBarButtonMouseOver}"
                             ButtonImageSourcePressed="{StaticResource CalendarNavBarButtonPressed}"
-                            ButtonImageSourceDisabled="{StaticResource CalendarNavBarButtonDisabled}"/>
+                            ButtonImageSourceDisabled="{StaticResource CalendarNavBarButtonDisabled}"
+                            ButtonImageSourceHighlighted="{StaticResource CalendarNavBarButtonPressed}"/>
                         <btn:NavigationBarButton
                             ButtonText="Projects"
                             ButtonClickedCommand="{Binding ProjectsButtonClickedCommand}"
+                            IsHighlighted="{Binding IsProjectsTabSelected}"
                             ButtonImageSource="{StaticResource BriefcaseNavBarButton}"
                             ButtonImageSourceMouseOver="{StaticResource BriefcaseNavBarButtonMouseOver}"
                             ButtonImageSourcePressed="{StaticResource BriefcaseNavBarButtonPressed}"
-                            ButtonImageSourceDisabled="{StaticResource BriefcaseNavBarButtonDisabled}"/>
+                            ButtonImageSourceDisabled="{StaticResource BriefcaseNavBarButtonDisabled}"
+                            ButtonImageSourceHighlighted="{StaticResource BriefcaseNavBarButtonPressed}"/>
                     </StackPanel>
                 </Border>
 

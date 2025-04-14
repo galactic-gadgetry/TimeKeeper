@@ -32,6 +32,7 @@
     <Color x:Key="SolidControlFillColorPrimary80">#80848E</Color>
     <Color x:Key="SolidControlFillColorPrimary90">#6D6D76</Color>
     <Color x:Key="SolidControlFillColorPrimary100">#4E5058</Color>
+    <Color x:Key="SolidControlFillColorPrimary120">#404249</Color>
     <Color x:Key="SolidControlFillColorPrimary130">#2B2D31</Color>
     <Color x:Key="SolidControlFillColorPrimaryDisabled">#494A50</Color>
 
@@ -80,10 +81,12 @@
     <SolidColorBrush x:Key="NavigationBarButtonBackgroundMouseOver" Color="{StaticResource WindowBackgroundColorPrimary90}"/>
     <SolidColorBrush x:Key="NavigationBarButtonBackgroundPressed" Color="{StaticResource SolidControlFillColorPrimary100}"/>
     <SolidColorBrush x:Key="NavigationBarButtonBackgroundDisabled" Color="{StaticResource SolidControlFillColorPrimaryDisabled}"/>
+    <SolidColorBrush x:Key="NavigationBarButtonBackgroundHighlighted" Color="{StaticResource SolidControlFillColorPrimary120}"/>
     <SolidColorBrush x:Key="NavigationBarButtonForeground" Color="{StaticResource TextFillColorPrimary80}"/>
     <SolidColorBrush x:Key="NavigationBarButtonForegroundMouseOver" Color="{StaticResource TextFillColorSecondary120}"/>
     <SolidColorBrush x:Key="NavigationBarButtonForegroundPressed" Color="{StaticResource TextFillColorSecondary100}"/>
     <SolidColorBrush x:Key="NavigationBarButtonForegroundDisabled" Color="{StaticResource TextFillColorSecondaryDisabled}"/>
+    <SolidColorBrush x:Key="NavigationBarButtonForegroundHighlighted" Color="{StaticResource TextFillColorSecondary100}"/>
     <SolidColorBrush x:Key="NavigationBarButtonBorderBrush" Color="{StaticResource TextFillColorSecondary100}"/>
     <SolidColorBrush x:Key="NavigationBarButtonBorderBrushMouseOver" Color="{StaticResource TextFillColorSecondary100}"/>
     <SolidColorBrush x:Key="NavigationBarButtonBorderBrushPressed" Color="{StaticResource TextFillColorSecondary100}"/>
