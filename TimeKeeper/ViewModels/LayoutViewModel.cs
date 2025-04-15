@@ -11,6 +11,9 @@ namespace TimeKeeper.ViewModels
 {
     public class LayoutViewModel : ViewModelBase
     {
+
+        private readonly BookStore _bookStore;
+
         /// <summary>
         /// Used by the view-model to determine the app's
         /// navigation state.
@@ -37,8 +40,9 @@ namespace TimeKeeper.ViewModels
 
 
 
-        public LayoutViewModel(NavigationStore navigationStore)
+        public LayoutViewModel(BookStore bookStore, NavigationStore navigationStore)
         {
+            _bookStore = bookStore;
             _navigationStore = navigationStore;
 
             _navigationStore.CurrentLayoutContentViewModelChanged +=
@@ -59,6 +63,7 @@ namespace TimeKeeper.ViewModels
             INavigate projectsNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "projects",
+                    _bookStore,
                     _navigationStore);
 
             projectsNavigationService.Navigate();
@@ -70,10 +75,12 @@ namespace TimeKeeper.ViewModels
             INavigate navBarNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "navigation bar",
+                    _bookStore,
                     _navigationStore);
             INavigate sideContentNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "null side content",
+                    _bookStore,
                     _navigationStore);
 
             navBarNavigationService.Navigate();
@@ -86,10 +93,12 @@ namespace TimeKeeper.ViewModels
             INavigate settingsNavBarNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "settings navigation bar",
+                    _bookStore,
                     _navigationStore);
             INavigate sideContentNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "null side content",
+                    _bookStore,
                     _navigationStore);
 
             settingsNavBarNavigationService.Navigate();

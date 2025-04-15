@@ -13,7 +13,9 @@ namespace TimeKeeper.Utilities
     {
 
         public static INavigate CreateNavigationService(
-            string type, NavigationStore navigationStore)
+            string type,
+            BookStore bookStore,
+            NavigationStore navigationStore)
         {
             switch (type.ToLower())
             {
@@ -24,11 +26,11 @@ namespace TimeKeeper.Utilities
                 case "layout":
                     return new NavigationService<LayoutViewModel>(
                         navigationStore,
-                        () => new LayoutViewModel(navigationStore));
+                        () => new LayoutViewModel(bookStore, navigationStore));
                 case "navigation bar":
                     return new NavBarNavigationService<NavigationBarViewModel>(
                         navigationStore,
-                        () => new NavigationBarViewModel(navigationStore));
+                        () => new NavigationBarViewModel(bookStore, navigationStore));
                 case "null side content":
                     return new SideContentNavigationService<ViewModelBase>(
                         navigationStore,
@@ -40,11 +42,15 @@ namespace TimeKeeper.Utilities
                 case "projects":
                     return new LayoutNavigationService<ProjectsViewModel>(
                         navigationStore,
-                        () => new ProjectsViewModel(navigationStore));
+                        () => new ProjectsViewModel(bookStore,navigationStore));
                 case "settings navigation bar":
                     return new NavBarNavigationService<SettingsNavigationBarViewModel>(
                         navigationStore,
                         () => new SettingsNavigationBarViewModel());
+                case "start screen":
+                    return new NavigationService<StartScreenViewModel>(
+                        navigationStore,
+                        () => new StartScreenViewModel());
                 default:
                     throw new NotImplementedException();
             }

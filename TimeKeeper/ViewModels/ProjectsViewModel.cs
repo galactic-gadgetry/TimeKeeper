@@ -17,6 +17,9 @@ namespace TimeKeeper.ViewModels
 {
     public class ProjectsViewModel : DefaultViewModelBase
     {
+
+        private readonly BookStore _bookStore;
+
         /// <summary>
         /// Used by the view-model to determine the app's navigation
         /// state.
@@ -53,8 +56,9 @@ namespace TimeKeeper.ViewModels
 
 
 
-        public ProjectsViewModel(NavigationStore navigationStore)
+        public ProjectsViewModel(BookStore bookStore, NavigationStore navigationStore)
         {
+            _bookStore = bookStore;
             _navigationStore = navigationStore;
 
             CreateProjectButtonClickedCommand = new RelayCommand(
@@ -67,6 +71,7 @@ namespace TimeKeeper.ViewModels
             _projectDetailsNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "project details",
+                    _bookStore,
                     _navigationStore);
         }
 

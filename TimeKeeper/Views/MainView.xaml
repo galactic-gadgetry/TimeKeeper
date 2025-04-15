@@ -17,6 +17,9 @@
                 <DataTemplate DataType="{x:Type vm:LayoutViewModel}">
                     <ui:Layout/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:StartScreenViewModel}">
+                    <local:StartScreenView/>
+                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
 

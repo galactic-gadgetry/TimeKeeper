@@ -13,6 +13,10 @@ namespace TimeKeeper.ViewModels
 {
     public class NavigationBarViewModel : ViewModelBase
     {
+
+        private readonly BookStore _bookStore;
+
+
         /// <summary>
         /// Used by the view-model to navigate to the Daily Timesheet
         /// view.
@@ -91,17 +95,20 @@ namespace TimeKeeper.ViewModels
 
 
 
-        public NavigationBarViewModel(NavigationStore navigationStore)
+        public NavigationBarViewModel(BookStore bookStore, NavigationStore navigationStore)
         {
+            _bookStore = bookStore;
             _navigationStore = navigationStore;
 
             _dailyTimesheetNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "daily timesheet",
+                    _bookStore,
                     _navigationStore);
             _projectsNavigationService =
                 ServiceFactory.CreateNavigationService(
                     "projects",
+                    _bookStore,
                     _navigationStore);
 
             DailyTimesheetButtonClickedCommand = new RelayCommand(

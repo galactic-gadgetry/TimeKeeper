@@ -68,6 +68,8 @@
     <SolidColorBrush x:Key="LayerFillColorBrush1" Color="{StaticResource WindowBackgroundColorPrimary100}"/>
     <SolidColorBrush x:Key="LayerFillColorBrush2" Color="{StaticResource SolidControlFillColorPrimary130}"/>
 
+    <SolidColorBrush x:Key="LayerAccentFillColorBrush1" Color="{StaticResource SolidControlFillColorSecondary100}"/>
+
     <SolidColorBrush x:Key="TextFillColorBrush1" Color="{StaticResource TextFillColorPrimary80}"/>
 
     <SolidColorBrush x:Key="TextAccentFillColorBrush1" Color="{StaticResource TextFillColorPrimary90}"/>
