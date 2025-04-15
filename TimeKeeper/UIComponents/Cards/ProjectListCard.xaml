@@ -37,8 +37,8 @@
                                     Style="{StaticResource HeaderLabelStyle}"/>
                                 <TextBlock>
                                     <Hyperlink
-                                        Command="{Binding NameHyperlinkButtonClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
-                                        CommandParameter="{Binding NameHyperlinkButtonClickedCommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
+                                        Command="{Binding NameHyperlinkClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                                        CommandParameter="{Binding NameHyperlinkClickedCommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                                         <TextBlock Text="{Binding NameText, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
                                     </Hyperlink>
                                 </TextBlock>
@@ -84,7 +84,9 @@
                                     </Style>
                                 </StackPanel.Resources>
 
-                                <Button>
+                                <Button
+                                    Command="{Binding EditButtonClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                                    CommandParameter="{Binding EditButtonClickedCommandParameter, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                                     <Image Source="{StaticResource EditGray}"/>
                                 </Button>
 

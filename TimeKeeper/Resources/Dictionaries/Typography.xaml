@@ -3,6 +3,19 @@
 
 
     <!-- #Label -->
+    <Style x:Key="DetailsFieldHeaderLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="FontSize" Value="{DynamicResource SmallLabelFontSize}"/>
+    </Style>
+
+    <Style x:Key="DetailsFieldLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextAccentFillColorBrush1}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+
+    <Style x:Key="DetailsFieldStrongLabelStyle" TargetType="Label" BasedOn="{StaticResource DetailsFieldLabelStyle}">
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    
     <Style x:Key="DialogInputFieldHeaderLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
         <Setter Property="Foreground" Value="{StaticResource TextFillColorBrush1}"/>
         <Setter Property="FontSize" Value="{DynamicResource SmallLabelFontSize}"/>

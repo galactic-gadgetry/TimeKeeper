@@ -35,6 +35,7 @@
     <Color x:Key="SolidControlFillColorPrimary120">#404249</Color>
     <Color x:Key="SolidControlFillColorPrimary130">#2B2D31</Color>
     <Color x:Key="SolidControlFillColorPrimary140">#1E1E22</Color>
+    <Color x:Key="SolidControlFillColorPrimary170">#1A1B1E</Color>
     <Color x:Key="SolidControlFillColorPrimaryDisabled">#494A50</Color>
 
     <Color x:Key="SolidControlFillColorSecondary100">#5865F2</Color>
@@ -42,6 +43,10 @@
     <Color x:Key="SolidControlFillColorSecondary120">#3C45A5</Color>
     <Color x:Key="SolidControlFillColorSecondaryDisabled">#424991</Color>
 
+    <Color x:Key="AlertControlFillColorPrimary100">#DA373C</Color>
+    <Color x:Key="AlertControlFillColorPrimary110">#BC2F32</Color>
+    <Color x:Key="AlertControlFillColorPrimary120">#8F2022</Color>
+    <Color x:Key="AlertControlFillColorPrimaryDisabled">#DA373E</Color>
 
     <Color x:Key="TextControlFillColorPrimary90">#BCBEC2</Color>
     <Color x:Key="TextControlFillColorPrimary100">#383A40</Color>
@@ -58,6 +63,7 @@
     <!-- #Brushes -->
     <SolidColorBrush x:Key="ControlBackgroundFillColorBrush1" Color="{StaticResource SolidControlFillColorPrimary140}"/>
     <SolidColorBrush x:Key="ControlBackgroundFillColorBrush2" Color="{StaticResource SolidControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="ControlBackgroundFillColorBrush3" Color="{StaticResource SolidControlFillColorPrimary170}"/>
 
     <SolidColorBrush x:Key="LayerFillColorBrush1" Color="{StaticResource WindowBackgroundColorPrimary100}"/>
     <SolidColorBrush x:Key="LayerFillColorBrush2" Color="{StaticResource SolidControlFillColorPrimary130}"/>
@@ -95,6 +101,22 @@
     <SolidColorBrush x:Key="AccentButtonBorderBrushPressed" Color="{StaticResource TextFillColorSecondary100}"/>
     <SolidColorBrush x:Key="AccentButtonBorderBrushDisabled" Color="{StaticResource TextFillColorSecondaryDisabled}"/>
 
+    <SolidColorBrush x:Key="DeleteButtonBackground" Color="{StaticResource AlertControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="DeleteButtonBackgroundMouseOver" Color="{StaticResource AlertControlFillColorPrimary110}"/>
+    <SolidColorBrush x:Key="DeleteButtonBackgroundPressed" Color="{StaticResource AlertControlFillColorPrimary120}"/>
+    <SolidColorBrush x:Key="DeleteButtonBackgroundDisabled" Color="{StaticResource AlertControlFillColorPrimaryDisabled}"/>
+    <SolidColorBrush x:Key="DeleteButtonBorderBrushMouseOver" Color="{StaticResource TextFillColorSecondary100}"/>
+    <SolidColorBrush x:Key="DeleteButtonBorderBrushPressed" Color="{StaticResource TextFillColorSecondary100}"/>
+    <SolidColorBrush x:Key="DeleteButtonBorderBrushDisabled" Color="{StaticResource TextFillColorSecondaryDisabled}"/>
+
+    <SolidColorBrush x:Key="EmptyDeleteButtonBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBackgroundMouseOver" Color="{StaticResource AlertControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBackgroundPressed" Color="{StaticResource AlertControlFillColorPrimary110}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBackgroundDisabled" Color="{StaticResource AlertControlFillColorPrimaryDisabled}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBorderBrush" Color="{StaticResource AlertControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBorderBrushMouseOver" Color="{StaticResource AlertControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBorderBrushPressed" Color="{StaticResource AlertControlFillColorPrimary100}"/>
+    <SolidColorBrush x:Key="EmptyDeleteButtonBorderBrushDisabled" Color="{StaticResource AlertControlFillColorPrimary100}"/>
 
     <SolidColorBrush x:Key="NavigationBarButtonBackground" Color="Transparent"/>
     <SolidColorBrush x:Key="NavigationBarButtonBackgroundMouseOver" Color="{StaticResource WindowBackgroundColorPrimary90}"/>

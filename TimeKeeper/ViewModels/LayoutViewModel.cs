@@ -83,7 +83,17 @@ namespace TimeKeeper.ViewModels
 
         private void NavigateSettingsViewConstituents()
         {
-            throw new NotImplementedException();
+            INavigate settingsNavBarNavigationService =
+                ServiceFactory.CreateNavigationService(
+                    "settings navigation bar",
+                    _navigationStore);
+            INavigate sideContentNavigationService =
+                ServiceFactory.CreateNavigationService(
+                    "null side content",
+                    _navigationStore);
+
+            settingsNavBarNavigationService.Navigate();
+            sideContentNavigationService.Navigate();
         }
 
 

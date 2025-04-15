@@ -59,7 +59,11 @@
                                             NameText="{Binding Name}"
                                             CodeText="{Binding Code}"
                                             WbsText="{Binding Wbs}"
-                                            StatusText="{Binding StatusText}"/>
+                                            StatusText="{Binding StatusText}"
+                                            EditButtonClickedCommand="{Binding DataContext.ProjectCardEditButtonClickedCommand, ElementName=ProjectsListView}"
+                                            EditButtonClickedCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"
+                                            NameHyperlinkClickedCommand="{Binding DataContext.ProjectCardNameHyperlinkClickedCommand, ElementName=ProjectsListView}"
+                                            NameHyperlinkClickedCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
