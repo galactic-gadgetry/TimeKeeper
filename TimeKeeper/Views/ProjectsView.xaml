@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TimeKeeper.Views"
+             xmlns:card="clr-namespace:TimeKeeper.UIComponents.Cards"
              mc:Ignorable="d" 
              d:DesignHeight="450">
     
@@ -32,7 +33,8 @@
                         Grid.Column="1"
                         Content="Create Project"
                         Style="{StaticResource AccentButtonStyle}"
-                        Margin="0,0,15,0"/>
+                        Margin="0,0,15,0"
+                        Command="{Binding CreateProjectButtonClickedCommand}"/>
                 </Grid>
                 
                 <!-- #View Contents -->
@@ -45,12 +47,25 @@
                         
                         <!-- TODO: Add filter row -->
                         <Border Grid.Row="0"/>
-                        
+
                         <!-- #Projects List -->
                         <Border Grid.Row="1">
                             <ListView
-                                x:Name="ProjectsListView">
-                                
+                                x:Name="ProjectsListView"
+                                ItemsSource="{Binding Projects}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <card:ProjectListCard
+                                            NameText="{Binding Name}"
+                                            CodeText="{Binding Code}"
+                                            WbsText="{Binding Wbs}"
+                                            StatusText="{Binding StatusText}"
+                                            EditButtonClickedCommand="{Binding DataContext.ProjectCardEditButtonClickedCommand, ElementName=ProjectsListView}"
+                                            EditButtonClickedCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"
+                                            NameHyperlinkClickedCommand="{Binding DataContext.ProjectCardNameHyperlinkClickedCommand, ElementName=ProjectsListView}"
+                                            NameHyperlinkClickedCommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=DataContext}"/>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
                             </ListView>
                         </Border>
                     </Grid>

@@ -2,10 +2,43 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
+    <!-- #Label -->
+    <Style x:Key="DetailsFieldHeaderLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="FontSize" Value="{DynamicResource SmallLabelFontSize}"/>
+    </Style>
+
+    <Style x:Key="DetailsFieldLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextAccentFillColorBrush1}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+
+    <Style x:Key="DetailsFieldStrongLabelStyle" TargetType="Label" BasedOn="{StaticResource DetailsFieldLabelStyle}">
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+    
+    <Style x:Key="DialogInputFieldHeaderLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextFillColorBrush1}"/>
+        <Setter Property="FontSize" Value="{DynamicResource SmallLabelFontSize}"/>
+    </Style>
+    
+    <Style x:Key="DialogTitleLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextAccentFillColorBrush1}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
     <Style x:Key="ViewTitleLabelStyle" TargetType="Label" BasedOn="{StaticResource DefaultLabelStyle}">
         <Setter Property="Foreground" Value="{StaticResource TextAccentFillColorBrush1}"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="FontWeight" Value="Normal"/>
+    </Style>
+    
+    
+    <!-- #Text Block -->
+    <Style x:Key="DialogContentTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource DefaultTextBlockStyle}">
+        <Setter Property="Foreground" Value="{StaticResource TextFillColorBrush1}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,5"/>
     </Style>
     
 </ResourceDictionary>

@@ -46,6 +46,9 @@
                             <DataTemplate DataType="{x:Type vm:DailyTimesheetViewModel}">
                                 <view:DailyTimesheetView/>
                             </DataTemplate>
+                            <DataTemplate DataType="{x:Type vm:ProjectDetailsViewModel}">
+                                <view:ProjectDetailsView/>
+                            </DataTemplate>
                             <DataTemplate DataType="{x:Type vm:ProjectsViewModel}">
                                 <view:ProjectsView/>
                             </DataTemplate>

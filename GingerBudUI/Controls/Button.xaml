@@ -4,6 +4,7 @@
 
     <Thickness x:Key="ButtonPadding">11,5</Thickness>
     <Thickness x:Key="ButtonThemeBorderThickness">0</Thickness>
+    <Thickness x:Key="AlternateButtonThemeBorderThickness">1</Thickness>
     
 
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
@@ -97,6 +98,62 @@
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Background" Value="{DynamicResource AccentButtonBackgroundDisabled}"/>
                 <Setter Property="BorderBrush" Value="{DynamicResource AccentButtonBorderBrushDisabled}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="DeleteButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Background" Value="{DynamicResource DeleteButtonBackground}"/>
+        <Style.Triggers>
+            <!-- #Mouse over, enabled behaviors -->
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="True"/>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{DynamicResource DeleteButtonBackgroundMouseOver}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource DeleteButtonBorderBrushMouseOver}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </MultiTrigger>
+            <!-- #Pressed behaviors -->
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource DeleteButtonBackgroundPressed}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource DeleteButtonBorderBrushPressed}"/>
+            </Trigger>
+            <!-- #Disabled behaviors -->
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{DynamicResource DeleteButtonBackgroundDisabled}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource DeleteButtonBorderBrushDisabled}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="EmptyDeleteButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Background" Value="{DynamicResource EmptyDeleteButtonBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource EmptyDeleteButtonBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="{StaticResource AlternateButtonThemeBorderThickness}"/>
+        <Style.Triggers>
+            <!-- #Mouse over, enabled behaviors -->
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsEnabled" Value="True"/>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{DynamicResource EmptyDeleteButtonBackgroundMouseOver}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource EmptyDeleteButtonBorderBrushMouseOver}"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </MultiTrigger>
+            <!-- #Pressed behaviors -->
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{DynamicResource EmptyDeleteButtonBackgroundPressed}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource EmptyDeleteButtonBorderBrushPressed}"/>
+            </Trigger>
+            <!-- #Disabled Behaviors -->
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{DynamicResource EmptyDeleteButtonBackgroundDisabled}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource EmptyDeleteButtonBorderBrushDisabled}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

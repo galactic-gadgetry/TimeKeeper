@@ -12,4 +12,8 @@
     <BitmapImage x:Key="CalendarNavBarButtonPressed" UriSource="/TimeKeeper;component/Resources/Images/Icons/Calendar/calendar-text-color-secondary-100.png"/>
     <BitmapImage x:Key="CalendarNavBarButtonDisabled" UriSource="/TimeKeeper;component/Resources/Images/Icons/Calendar/calendar-text-color-secondary-disabled.png"/>
 
+    <BitmapImage x:Key="EditGray" UriSource="/TimeKeeper;component/Resources/Images/Icons/Edit/edit-text-color-primary-80.png"/>
+
+    <BitmapImage x:Key="TrashGray" UriSource="/TimeKeeper;component/Resources/Images/Icons/Trash/trash-text-color-primary-80.png"/>
+
 </ResourceDictionary>

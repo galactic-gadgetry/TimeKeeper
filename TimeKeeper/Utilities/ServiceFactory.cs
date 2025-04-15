@@ -29,14 +29,22 @@ namespace TimeKeeper.Utilities
                     return new NavBarNavigationService<NavigationBarViewModel>(
                         navigationStore,
                         () => new NavigationBarViewModel(navigationStore));
-                case "projects":
-                    return new LayoutNavigationService<ProjectsViewModel>(
-                        navigationStore,
-                        () => new ProjectsViewModel());
                 case "null side content":
                     return new SideContentNavigationService<ViewModelBase>(
                         navigationStore,
                         () => null);
+                case "project details":
+                    return new LayoutNavigationService<ProjectDetailsViewModel>(
+                        navigationStore,
+                        () => new ProjectDetailsViewModel());
+                case "projects":
+                    return new LayoutNavigationService<ProjectsViewModel>(
+                        navigationStore,
+                        () => new ProjectsViewModel(navigationStore));
+                case "settings navigation bar":
+                    return new NavBarNavigationService<SettingsNavigationBarViewModel>(
+                        navigationStore,
+                        () => new SettingsNavigationBarViewModel());
                 default:
                     throw new NotImplementedException();
             }

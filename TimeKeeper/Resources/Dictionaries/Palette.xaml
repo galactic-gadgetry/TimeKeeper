@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    <!-- #Colors -->
+    <Color x:Key="BannerColorPrimary100">#61554C</Color>
+    
+    
+    <!-- #Brushes -->
+    <SolidColorBrush x:Key="AccentBorderBackground" Color="{StaticResource BannerColorPrimary100}"/>
+    
+    
+    <!-- #Borders -->
+    <SolidColorBrush x:Key="AccentBorderBrush" Color="{StaticResource BannerColorPrimary100}"/>
+
+</ResourceDictionary>
